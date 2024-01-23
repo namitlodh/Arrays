@@ -23,9 +23,10 @@ namespace Arrays_problems
                     elementCount.Add(arr[i], 1);
                 }
             }
+            Console.WriteLine("Unique elements in the array are: ");
             foreach (var entry in elementCount)
             {
-                Console.WriteLine($"{entry.Key} occurs {entry.Value} times");
+                Console.WriteLine($"{entry.Key}");
             }
         }
 

@@ -10,19 +10,15 @@ namespace Arrays_problems
     {
         static void Main(string[] args)
         {
-            int[] arr = { 1,1,2,1,2,3,3,20, 10, -1};
-            int len = arr.Length;
-            int max = arr[0]; 
-            int min = arr[0] ;
-            for (int i = 0; i < len; i++) 
+            int rows = Convert.ToInt32(Console.ReadLine());
+            for(int i=rows; i>0; i--)
             {
-                if (arr[i] >max)
-                    max = arr[i];
-                else if (arr[i] <min)
-                    min = arr[i];
+                for(int j=0; j<i; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
             }
-            Console.WriteLine($"maximun element is: {max}");
-            Console.WriteLine($"minimum element is: {min}");
 
             Console.ReadLine();
         }

@@ -11,11 +11,18 @@ namespace Arrays_problems
         static void Main(string[] args)
         {
             int rows = Convert.ToInt32(Console.ReadLine());
-            for(int i=rows; i>0; i--)
+            for(int i=0; i<rows; i++)
             {
-                for(int j=0; j<i; j++)
+                for(int j=0; j<rows; j++)
                 {
-                    Console.Write("*");
+                    if (i == 0 || j == 0 || i == rows - 1 || j == rows - 1)
+                    {
+                        Console.Write("*");
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
                 }
                 Console.WriteLine();
             }

@@ -22,17 +22,19 @@ namespace Arrays_problems
                 {
                     elementCount.Add(arr[i], 1);
                 }
+
+
             }
-            Console.WriteLine("Unique elements in the array are: ");
             foreach (var entry in elementCount)
             {
+                if(entry.Value > 1)
                 Console.WriteLine($"{entry.Key}");
             }
         }
 
         static void Main(string[] args)
         {
-            int[] arr = { 1,1,2,1,2 };
+            int[] arr = { 1,1,2,1,2,3,3};
             int n = arr.Length;
             CountOccurrences(arr, n);
             Console.ReadLine();
